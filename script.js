@@ -15,8 +15,21 @@
         // Rock beats scissors but loses to paper
         // Paper beats rock but loses to scissors
         // Scissors beats paper but loses to rock
-    // Prompt asks user to select Rock, Paper or Scissors
-    // User inputs their selection
+    // Prompt asks user to input their choice Rock, Paper or Scissors
+    
+    /* let userChoice = prompt("Please pick Rock, Paper or Scissors.");  
+    let options = ["rock","paper","scissors"];
+    let choice = options.indexOf(userChoice.toLowerCase());
+    console.log(userChoice.toLowerCase());
+    console.log(options);
+    console.log(choice);
+    // Add in else, error please select Rock Paper or Scissors.
+    if (choice >= 0 && choice <= 2){
+        alert("Computing");
+    } else {
+        alert("Invalid response. Please pick Rock, Paper or Scissors.");
+    } */
+    
     // Computer randomly selects either Rock, Paper or Scissors
     // Computer compares the user's response to their own, aka calculates the winner
         // If user picks Rock &
@@ -33,4 +46,27 @@
             // Comp picks Scissors, then tie aka no winner
     // Output to user the result aka declare winner
     // Ask user if they want to play again
-    // Repeat
+    // Repeat (RPS)
+
+
+    let options = ["rock", "paper", "scissors"];
+    let computerChoice = getComputerChoice();
+    function getComputerChoice(){
+        const random = Math.floor(Math.random() * options.length);
+        console.log(random, options[random]);
+        return options[random];
+    }
+    let userChoice = getUserChoice();
+    function getUserChoice (){
+        let userInput = prompt("Please pick Rock, Paper or Scissors");
+        let choice = options.indexOf(userInput.toLowerCase());
+        if(choice >= 0 && choice <= 2){
+            //compare(userChoice, computerChoice);
+        } else {
+            alert("Invalid response.");
+            getUserChoice();
+        }
+    }
+    function compare(){ //pass arguments and name them
+        //switches
+    }
