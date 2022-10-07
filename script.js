@@ -53,16 +53,50 @@
         }
         return userInput.toLowerCase();
     }
-    function playRound(userChoice, computerChoice){ 
-        if (userChoice === "rock" && computerChoice === "scissors"){
-            alert("Rock beats scissors, you win round 1!");
-            getUserChoice();
-        } else if (userChoice === "rock" && computerChoice === "paper"){
-            alert("Paper beats rock, you lose round 1.");
-            getUserChoice();
-        } else {
-            alert("Round 1 is a draw.")
-            getUserChoice();
+    function playRound(userChoice, computerChoice){
+        switch (userChoice){
+            case "rock":
+                if (computerChoice === "scissors"){
+                    alert("Rock beats scissors, you win round 1!");
+                    getUserChoice();
+                } else if (computerChoice === "paper"){
+                    alert("Paper beats rock, you lose round 1.");
+                    getUserChoice();     
+                } else if (computerChoice === "rock"){
+                    alert("Round 1 is a draw.");
+                    getUserChoice();  
+                } else {
+                    alert("Does not compute, try again.");
+                }
+                break;
+            case "paper":
+                if (computerChoice === "rock"){
+                    alert("Paper beats rock, you win round 1!");
+                    getUserChoice();
+                } else if (computerChoice === "scissors"){
+                    alert("Scissors beats paper, you lose round 1.");
+                    getUserChoice();
+                } else if (computerChoice === "paper"){
+                    alert("Round 1 is a draw.");
+                    getUserChoice();
+                } else {
+                    alert("Does not compute, try again.");
+                }
+                break;
+            case "scissors":
+                if (computerChoice === "paper"){
+                    alert("Scissors beats paper, you win round 1!");
+                    getUserChoice();
+                } else if (computerChoice === "rock"){
+                    alert("Rock beats scissors, you lose round 1.");
+                    getUserChoice();
+                } else if (computerChoice === "scissors"){
+                    alert("Round 1 is a draw.");
+                    getUserChoice();
+                } else {
+                    alert("Does not compute, try again.");
+                }
+                break;
         }
     }
     playRound(userChoice, computerChoice);
