@@ -33,70 +33,93 @@
     // Output to user the result aka declare winner
     // Repeat game for 5 rounds or until someone wins a total of 3 games
 
-// function game(){}
+let compWins = 0;
+let userWins = 0;
+
+function game(){
     let options = ["rock", "paper", "scissors"]; 
     let computerChoice = getComputerChoice();
     function getComputerChoice(){
         const random = Math.floor(Math.random() * options.length);
-        console.log(random, options[random]);
+        console.log("Computer picked: " + random, options[random]);
         return options[random];
     }
+    
     let userChoice = getUserChoice();
     function getUserChoice (){
         let userInput = prompt("Please pick Rock, Paper or Scissors");
         let choice = options.indexOf(userInput.toLowerCase());
-        if(choice >= 0 && choice <= 2){
-            //playRound(userChoice, computerChoice);
-        } else {
+        if(choice < 0 || choice > 2){
             alert("Invalid response.");
             getUserChoice();
         }
         return userInput.toLowerCase();
     }
+    console.log("User picked: " + userChoice);
+    
     function playRound(userChoice, computerChoice){
         switch (userChoice){
             case "rock":
                 if (computerChoice === "scissors"){
-                    alert("Rock beats scissors, you win round 1!");
-                    getUserChoice();
+                    userWins++
+                    alert("Rock beats scissors, you win the round!");
+                    console.log("Rock beats scissors, user wins the round!");
                 } else if (computerChoice === "paper"){
-                    alert("Paper beats rock, you lose round 1.");
-                    getUserChoice();     
+                    compWins++
+                    alert("Paper beats rock, you lose the round.");
+                    console.log("Paper beats rock, user loses the round.");   
                 } else if (computerChoice === "rock"){
-                    alert("Round 1 is a draw.");
-                    getUserChoice();  
+                    alert("The round is a draw.");
+                    console.log("The round is a draw.")
                 } else {
                     alert("Does not compute, try again.");
+                    console.log("Does not compute, try again.")
                 }
                 break;
             case "paper":
                 if (computerChoice === "rock"){
-                    alert("Paper beats rock, you win round 1!");
-                    getUserChoice();
+                    userWins++
+                    alert("Paper beats rock, you win the round!");
+                    console.log("Paper beats rock, user wins the round.");
                 } else if (computerChoice === "scissors"){
-                    alert("Scissors beats paper, you lose round 1.");
-                    getUserChoice();
+                    compWins++
+                    alert("Scissors beats paper, you lose the round.");
+                    console.log("Scissors beats paper, user loses the round.");
                 } else if (computerChoice === "paper"){
-                    alert("Round 1 is a draw.");
-                    getUserChoice();
+                    alert("The round is a draw.");
+                    console.log("The round is a draw.")
                 } else {
                     alert("Does not compute, try again.");
+                    console.log("Does not compute, try again.")
                 }
                 break;
             case "scissors":
                 if (computerChoice === "paper"){
+                    userWins++
                     alert("Scissors beats paper, you win round 1!");
-                    getUserChoice();
+                    console.log("Scissors beats paper, user wins the round.");
                 } else if (computerChoice === "rock"){
+                    compWins++
                     alert("Rock beats scissors, you lose round 1.");
-                    getUserChoice();
+                    console.log("Rock beats scissors, user loses the round.");
                 } else if (computerChoice === "scissors"){
-                    alert("Round 1 is a draw.");
-                    getUserChoice();
+                    alert("The round is a draw.");
+                    console.log("The round is a draw.")
                 } else {
                     alert("Does not compute, try again.");
+                    console.log("Does not compute, try again.")
                 }
                 break;
         }
     }
     playRound(userChoice, computerChoice);
+    console.log("User wins: " + userWins);
+    console.log("Comp wins: " + compWins);
+}
+
+while (userWins < 3 && compWins < 3){
+    console.log("Round Start: ");
+    game();
+    console.log("Round Ends: ");
+}
+// while computer wins does not equal 3 and while user wins does not equal 3, repeat the game
