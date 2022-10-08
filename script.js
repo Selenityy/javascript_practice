@@ -1,5 +1,6 @@
 let compWins = 0;
 let userWins = 0;
+let rounds = 1;
 
 function game(){
     let options = ["rock", "paper", "scissors"]; 
@@ -30,13 +31,13 @@ function game(){
         switch (userChoice){
             case "rock":
                 if (computerChoice === "scissors"){
-                    userWins++
-                    alert("Rock beats scissors, you win the round!");
-                    console.log("Rock beats scissors, user wins the round!");
+                    userWins++;
+                    alert("Rock beats scissors, you win round " + rounds + "!");
+                    console.log("Rock beats scissors, user wins round " + rounds + "!");
                 } else if (computerChoice === "paper"){
-                    compWins++
-                    alert("Paper beats rock, you lose the round.");
-                    console.log("Paper beats rock, user loses the round.");   
+                    compWins++;
+                    alert("Paper beats rock, you lose round " + rounds + ".");
+                    console.log("Paper beats rock, user loses round " + rounds + ".");   
                 } else if (computerChoice === "rock"){
                     alert("The round is a draw.");
                     console.log("The round is a draw.")
@@ -47,13 +48,13 @@ function game(){
                 break;
             case "paper":
                 if (computerChoice === "rock"){
-                    userWins++
-                    alert("Paper beats rock, you win the round!");
-                    console.log("Paper beats rock, user wins the round.");
+                    userWins++;
+                    alert("Paper beats rock, you win round " + rounds + "!");
+                    console.log("Paper beats rock, user wins round " + rounds + ".");
                 } else if (computerChoice === "scissors"){
-                    compWins++
-                    alert("Scissors beats paper, you lose the round.");
-                    console.log("Scissors beats paper, user loses the round.");
+                    compWins++;
+                    alert("Scissors beats paper, you lose round " + ".");
+                    console.log("Scissors beats paper, user loses round " + rounds + ".");
                 } else if (computerChoice === "paper"){
                     alert("The round is a draw.");
                     console.log("The round is a draw.")
@@ -64,13 +65,13 @@ function game(){
                 break;
             case "scissors":
                 if (computerChoice === "paper"){
-                    userWins++
-                    alert("Scissors beats paper, you win the round!");
-                    console.log("Scissors beats paper, user wins the round.");
+                    userWins++;
+                    alert("Scissors beats paper, you win round " + rounds + "!");
+                    console.log("Scissors beats paper, user wins round " + rounds + ".");
                 } else if (computerChoice === "rock"){
-                    compWins++
-                    alert("Rock beats scissors, you lose the round.");
-                    console.log("Rock beats scissors, user loses the round.");
+                    compWins++;
+                    alert("Rock beats scissors, you lose round " + rounds + ".");
+                    console.log("Rock beats scissors, user loses round " + rounds + ".");
                 } else if (computerChoice === "scissors"){
                     alert("The round is a draw.");
                     console.log("The round is a draw.")
@@ -85,9 +86,12 @@ function game(){
     console.log("User wins: " + userWins);
     console.log("Comp wins: " + compWins);
 }
+alert("Welcome to Rock, Paper, Scissors! Please make sure to open up the website's Console to play this game. Thank you and have fun!");
 
 while (userWins < 3 && compWins < 3){
-    console.log("Round Start: ");
+    console.log("Round " + rounds + " Start: ");
     game();
-    console.log("Round Ends: ");
+    console.log("Round " + rounds + " Ends");
+    console.log("------------------------------")
+    rounds++;
 }
