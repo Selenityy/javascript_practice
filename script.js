@@ -3,7 +3,7 @@ let userWins = 0;
 let rounds = 1;
 
 function game(){
-    let options = ["rock", "paper", "scissors"]; 
+    const options = ["rock", "paper", "scissors"]; 
     const random = Math.floor(Math.random() * options.length);
     //let computerChoice = getComputerChoice();
     let computerChoice = options[random];
@@ -13,7 +13,7 @@ function game(){
     // }
     
     let userChoice = getUserChoice();
-    function getUserChoice (){
+    function getUserChoice() {
         let userInput = prompt("Please pick Rock, Paper or Scissors");
         let choice = options.indexOf(userInput.toLowerCase());
         if(choice < 0 || choice > 2){
