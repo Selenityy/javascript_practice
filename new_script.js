@@ -100,20 +100,20 @@ window.onload = function(){
         btn.innerHTML = "Want to play again?";
         btn.onclick = function() {
             // make the top buttons clickable
+            document.querySelector("#rock").disabled = false;
+            document.querySelector("#paper").disabled = false;
+            document.querySelector("#scissors").disabled = false;
             // make the results sentence show no words
+            document.getElementById("result").innerHTML = "";
             // make the scores go back to zero
+            compWins = 0;
+            document.getElementById("computerScore").innerHTML = "0";
+            userWins = 0;
+            document.getElementById("playerScore").innerHTML = "0";
+            rounds = 1;
             // make the play again button disappear
+            btn.parentNode.removeChild(btn);
         }
         element.appendChild(btn);
     }
 } 
-
-
-// When user picks a button
-// Tell user what they picked
-// Trigger computer picking rock, paper or scissors
-// Tell user what computer picked
-// Compare which value is greater
-// Tell user if they won or lost
-// Keep track of score on screen
-// repeat on button click
