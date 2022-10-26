@@ -1,13 +1,16 @@
 let compWins = 0;
 let userWins = 0;
 let rounds = 1;
+
 // game function will start the round after the welcome prompt while the user and computer have a score of not 3.
 function game(){
     const options = ["rock", "paper", "scissors"]; 
     const random = Math.floor(Math.random() * options.length);
+    
     // retrieves and stores the computer's input.
     let computerChoice = options[random]; 
     let userChoice = getUserChoice();
+    
     // getUserChoice function is to retrieve and stores the user's input.
     function getUserChoice() {
         let userInput = prompt("Please pick Rock, Paper or Scissors");
@@ -21,7 +24,8 @@ function game(){
         }
     }
     console.log("User picked: " + userChoice);
-    console.log("Computer picked: " + options[random]);  
+    console.log("Computer picked: " + options[random]);    
+
     // playRound function is how the computer decides who won, aka the rules of rock paper scissors.
     function playRound(userChoice, computerChoice){
         switch (userChoice){
@@ -78,11 +82,14 @@ function game(){
                 break;
         }
     }
-    playRound(userChoice, computerChoice);
+    playRound(userChoice, computerChoice); //userChoice = playerSelection & computerChoice = computerSelection
     console.log("User wins: " + userWins);
     console.log("Comp wins: " + compWins);
 }
-alert("Welcome to Rock, Paper, Scissors! Please make sure to open up the website's Console to play this game. Thank you and have fun!");
+
+
+//alert("Welcome to Rock, Paper, Scissors! Please make sure to open up the website's Console to play this game. Thank you and have fun!");
+
 // this while loop keeps the game going until someone wins 3 times.
 while (userWins < 3 && compWins < 3){
     console.log("Round " + rounds + " Start: ");
