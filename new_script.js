@@ -97,6 +97,11 @@ window.onload = function(){
     function playAgain() {
         let element = document.getElementById("repeat");
         let btn = document.createElement("button");
+        btn.style.backgroundColor = 'gray';
+        btn.style.color = 'white';
+        btn.style.fontSize = '30pt';
+        btn.style.marginLeft = '10px';
+        btn.style.marginBottom = '30px';
         btn.innerHTML = "Want to play again?";
         btn.onclick = function() {
             // make the top buttons clickable
