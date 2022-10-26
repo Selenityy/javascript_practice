@@ -20,17 +20,20 @@ window.onload = function(){
             case "rock":
                 if(computerSelection === "scissors") {
                     document.getElementById("playerScore").innerHTML = ++userWins;
+                    document.getElementById("computer_picks").innerHTML = "Computer picked: " + computerSelection + ".";
                     document.getElementById("result").innerHTML = "Rock beats scissors, you win round " + rounds + "!";
                     console.log("Rock beats scissors, user wins round " + rounds + "!");
                     console.log("------------------------"); 
                     rounds++;
                 } else if(computerSelection === "paper") {
                     document.getElementById("computerScore").innerHTML = ++compWins;
+                    document.getElementById("computer_picks").innerHTML = "Computer picked: " + computerSelection + ".";
                     document.getElementById("result").innerHTML = "Paper beats rock, you lose round " + rounds + ".";
                     console.log("Paper beats rock, you lose round " + rounds + ".");
                     console.log("------------------------"); 
                     rounds++;
                 } else if(computerSelection === "rock") {
+                    document.getElementById("computer_picks").innerHTML = "Computer picked: " + computerSelection + ".";
                     document.getElementById("result").innerHTML = "The round is a draw.";
                     console.log("The round is a draw.");
                     console.log("------------------------"); 
@@ -39,17 +42,20 @@ window.onload = function(){
             case "paper":
                 if(computerSelection === "rock") {
                     document.getElementById("playerScore").innerHTML = ++userWins;
+                    document.getElementById("computer_picks").innerHTML = "Computer picked: " + computerSelection + ".";
                     document.getElementById("result").innerHTML = "Paper beats rock, you win round " + rounds + "!";
                     console.log("Paper beats rock, you win round " + rounds + "!");
                     console.log("------------------------"); 
                     rounds++;
                 } else if(computerSelection === "scissors") {
                     document.getElementById("computerScore").innerHTML = ++compWins;
+                    document.getElementById("computer_picks").innerHTML = "Computer picked: " + computerSelection + ".";
                     document.getElementById("result").innerHTML = "Scissors beats paper, you lose round " + rounds + ".";
                     console.log("Scissors beats paper, you lose round " + rounds + ".");
                     console.log("------------------------"); 
                     rounds++;
                 } else if(computerSelection === "paper") {
+                    document.getElementById("computer_picks").innerHTML = "Computer picked: " + computerSelection + ".";
                     document.getElementById("result").innerHTML = "The round is a draw.";
                     console.log("The round is a draw.");
                     console.log("------------------------"); 
@@ -58,17 +64,20 @@ window.onload = function(){
             case "scissors":
                 if(computerSelection === "paper") {
                     document.getElementById("playerScore").innerHTML = ++userWins;
+                    document.getElementById("computer_picks").innerHTML = "Computer picked: " + computerSelection + ".";
                     document.getElementById("result").innerHTML = "Scissors beats paper, you win round " + rounds + "!";
                     console.log("Scissors beats paper, you win round " + rounds + "!");
                     console.log("------------------------"); 
                     rounds++;
                 } else if(computerSelection === "rock") {
                     document.getElementById("computerScore").innerHTML = ++compWins;
+                    document.getElementById("computer_picks").innerHTML = "Computer picked: " + computerSelection + ".";
                     document.getElementById("result").innerHTML = "Rock beats scissors, you lose round " + rounds + ".";
                     console.log("Rock beats scissors, you lose round " + rounds + ".");
                     console.log("------------------------"); 
                     rounds++;
                 } else if(computerSelection === "scissors") {
+                    document.getElementById("computer_picks").innerHTML = "Computer picked: " + computerSelection + ".";
                     document.getElementById("result").innerHTML = "The round is a draw.";
                     console.log("The round is a draw.");
                     console.log("------------------------"); 
