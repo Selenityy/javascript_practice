@@ -174,13 +174,24 @@ body {
     margin: 10px;
 }
 
+#computer_picks {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 10px;
+    font-size: 20pt; 
+}
+
 #result {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     align-content: center;
     /* border: 2px solid black; */
-    margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
     height: 100px;
