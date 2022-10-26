@@ -1,0 +1,160 @@
+body {
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    
+}
+
+/* .images_buttons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+} */
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 50px;
+}
+
+.rock_image {
+    width: 20vh;
+    height: 20vh;
+    object-fit: scale-down;
+    /* padding: 0px 140px 0px 0px; */
+}
+
+.paper_image {
+    width: 20vh;
+    height: 20vh;
+    object-fit: scale-down;
+    /* padding: 25px;
+    padding: 0px 90px 0px 0px; */
+}
+
+.scissor_image {
+    width: 20vh;
+    height: 20vh;
+    object-fit: scale-down;
+    /* padding: 25px;
+    padding: 0px 0px 0px 15px; */
+}
+
+
+/* .button {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+} */
+
+.rock,
+.paper,
+.scissor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    gap: 20px 0px;
+}
+
+#rock {
+    display: flex;
+    padding: 14px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: gray;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.3s;
+    align-self: center;
+}
+
+#rock:hover {
+    background-color: #444444;
+}
+
+#rock:active {
+    background-color: #444444;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px)
+}
+
+#paper {
+    display: flex;
+    padding: 14px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: gray;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.3s;
+    align-self: center;
+}
+
+#paper:hover {
+    background-color: #444444;
+}
+
+#paper:active {
+    background-color: #444444;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px)
+}
+
+#scissors {
+    display: flex;
+    padding: 14px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: gray;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.3s;
+    align-self: center;
+}
+
+#scissors:hover {
+    background-color: #444444;
+}
+
+#scissors:active {
+    background-color: #444444;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px)
+}
+
+.opponent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 50px;
+    gap: 100px;
+}
+
+.rotom {
+    width: 20vh;
+    height: 20vh;
+    object-fit: scale-down;
+}
